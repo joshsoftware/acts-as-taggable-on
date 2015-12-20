@@ -449,6 +449,8 @@ ActsAsTaggableOn.delimiter = ','
 set to true, the `strict_case_match` is ignored.
 To roughly apply the `force_binary_collation` behaviour with a version of the gem <= 3.4.4, execute the following commands in the MySql console:*
 
+*NOTE 3: the option `delimiter` is deprecated and will be removed from v4.0+, use ActsAsTaggableOn.default_parser instead. Read more about it [here](https://github.com/mbleigh/acts-as-taggable-on#tag-parsers).*
+
 ```shell
 USE my_wonderful_app_db;
 ALTER TABLE tags MODIFY name VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_bin;
